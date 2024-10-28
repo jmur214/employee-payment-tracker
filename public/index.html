@@ -1,0 +1,61 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payment Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ranch Payment Tracker</h1>
+        <div class="form-section">
+            <h2>John</h2>
+            <form id="john-form">
+                <label>Cash Amount:
+                    <input type="number" id="john-amount" required>
+                </label>
+                <button type="submit">Add John's Transaction</button>
+            </form>
+        </div>
+        <div class="form-section">
+            <h2>PGS</h2>
+            <form id="pgs-form">
+                <label>Amount:
+                    <input type="number" id="pgs-amount" required>
+                </label>
+                <label>Type:
+                    <select id="pgs-type">
+                        <option value="credit">Credit</option>
+                        <option value="debit">Debit</option>
+                    </select>
+                </label>
+                <label>Purpose:
+                    <select id="pgs-purpose">
+                        <option value="supplies">Supplies</option>
+                        <option value="labor">Labor</option>
+                        <option value="transport">Transport</option>
+                        <option value="compensation">Compensation</option>
+                    </select>
+                </label>
+                <label>Payment Method:
+                    <select id="pgs-payment_method">
+                        <option value="US_bank_card">US Bank Card</option>
+                        <option value="cash">Cash</option>
+                        <option value="zelle">Zelle</option>
+                    </select>
+                </label>
+                <button type="submit">Add PGS's Transaction</button>
+            </form>
+        </div>
+        <div id="transactions">
+            <h2>Transactions</h2>
+            <p id="balance">Balance: 0</p>
+            <ul id="transaction-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
